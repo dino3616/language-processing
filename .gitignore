@@ -42,3 +42,7 @@ coverage/
 
 # report
 report/
+
+# generated
+lex.yy.c
+*.tab.c
