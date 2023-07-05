@@ -1,7 +1,7 @@
-NAME = ./src/sample
+NAME = sample
 
 all: $(NAME).tab.c lex.yy.c
-	cc $(NAME).tab.c -lfl
+	gcc $(NAME).tab.c -lfl
 
 $(NAME).tab.c: $(NAME).y
 	bison $(NAME).y

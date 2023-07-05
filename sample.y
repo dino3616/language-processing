@@ -9,9 +9,10 @@
     float fval;
 }
 
-%type<ival> expr
+%token EOL ADD SUB MUL DIV LPB RPB
+%token <ival> NUM
 
-%token NUM EOL ADD SUB MUL DIV LPB RPB
+%type <ival> expr
 
 %%
 
@@ -35,4 +36,4 @@ int yyerror(const char* s) {
     return 0;
 }
 
-int main() { yyparse(); }
+int main(void) { yyparse(); }

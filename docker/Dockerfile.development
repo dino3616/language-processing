@@ -3,6 +3,6 @@ FROM ubuntu:lunar
 WORKDIR /workspaces/language-processing/
 
 RUN apt-get update \
-    && apt-get --no-install-recommends -y install git gnupg2 ca-certificates gcc g++ make clang-tidy bison flex \
+    && apt-get --no-install-recommends -y install git gnupg2 ca-certificates gcc g++ make clang-tidy bison flex libfl-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists
