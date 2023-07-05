@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: language-processing-app
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile.development
+    volumes:
+      - type: bind
+        source: ../
+        target: /workspaces/language-processing/
+    tty: true
