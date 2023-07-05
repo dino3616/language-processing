@@ -30,7 +30,7 @@ expr : expr ADD expr { $$ = $1 + $3; }
 
 %%
 
-#include "lex.yy.c"
+#include "sample.lex.yy.c"
 int yyerror(const char* s) {
     printf("%s\n", s);
     return 0;
